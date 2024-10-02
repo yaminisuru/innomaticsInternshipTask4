@@ -1,0 +1,412 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+/* navugation styling */
+nav {
+    background-color: tomato;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    background-color: #fff;
+    color: tomato;
+}
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+/* home section */
+#home { 
+    padding: 120px 20px;
+    color: #333;
+}
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: transform 0.5s;
+}
+
+.home-container:hover {
+    transform: scale(1.02); 
+}
+
+.home-text {
+    flex: 1;
+    margin-right: 20px;
+    text-align: left;
+    animation: fadeIn 1s ease-in;
+}
+
+.home-text h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+    animation: typing 3.5s steps(30, end), blink 0.75s step-end infinite;
+    white-space: nowrap; 
+    overflow: hidden; 
+    border-right: 3px solid tomato; /* Typing cursor effect */
+}
+
+.typing-demo {
+    width: 22ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+.home-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
+    animation: textSlideIn 2s ease;
+}
+
+.designation {
+    font-size: 100px;
+    color: tomato; 
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+.home-text span {
+    color: tomato;
+}
+
+.home-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    animation: slideIn 1s ease-in;
+}
+
+.home-image img {
+    width: 350px;
+    height: auto;
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: imageGlow 2s infinite alternate;
+}
+
+.home-image img:hover {
+    transform: scale(1.1); /* Scale on hover */
+    box-shadow: 0 0 30px rgba(255, 99, 71, 0.93);
+}
+
+#education {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#education h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: tomato;
+    
+}
+
+.education-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.education-card {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    width: 400px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #fb0f0f;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card img {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.education-card h3 {
+    font-size: 20px;
+   
+}
+
+.education-card p {
+    font-size: 1.2em;
+}
+
+.education-card:hover {
+ 
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px #fc1111;
+}
+
+
+/* Technologies Grid */
+#technologies{
+    
+    background-color: tomato;
+}
+#technologies-heading{
+    color:#fff;
+    font-size: 50px;
+}
+.tech-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tech-item {
+    margin: 10px;
+    text-align: center;
+    max-width: 150px;
+    color: white;
+    
+}
+
+.tech-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border: #333;
+}
+.tech-item img:hover {
+    transform: scale(1.1); /* Scale on hover */
+    box-shadow: 0 0 30px rgba(25, 20, 20, 0.7) /* Glow effect */
+
+}
+
+
+
+.tech-item p {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+/* Projects Cards */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 cards in the first row */
+    gap: 30px;
+    padding: 50px;
+}
+.projects-heading{
+    color: tomato;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    border-color: tomato;
+    box-shadow: 0 4px 8px tomato;
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background:tomato;
+    color: white;
+    
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+
+.card p {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.card a {
+    color: tomato;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin: 0 10px;
+}
+
+.card a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* Contact Section Styling */
+
+#contact {
+    background-color: tomato; /* Apply tomato color background */
+    color: white; /* Make the text white */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Slight rounded corners */
+    margin-top: 30px;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white; /* Ensure the heading text is white */
+}
+
+#contact a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+#contact p {
+    margin: 15px 0;
+}
+
+#contact i {
+    margin-right: 8px;
+}
+
+/* Style for icons */
+#contact .fab {
+    font-size: 1.5rem;
+}
+
+/* Flexbox layout to place the map on the right */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.contact-info {
+    flex: 1;
+    max-width: 40%; /* Adjust the width of the contact info */
+}
+
+.map-container {
+    flex: 1;
+    max-width: 50%; /* Adjust the width of the map */
+}
+
+.map-container iframe {
+    width: 100%; /* Make the map take full width of the container */
+    height: 100%;
+}
+
+
+footer {
+    background-color: tomato; /* Background color */
+    color: white; /* Text color */
+    text-align: center; /* Center align text */
+    padding: 20px 0; /* Padding to add spacing */
+    font-size: 16px; /* Font size */
+    font-family: 'Arial', sans-serif; /* Font styling */
+    position: relative;
+    bottom: 0;
+    width: 100%; /* Ensures the footer spans the full width */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+footer p {
+    margin: 0; /* Removes default margin */
+}
+
+footer a {
+    color: white; /* Ensures any links in the footer are also white */
+    text-decoration: none; /* Removes underline from links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+
+
+/* Responsive for smaller screens */
+@media (max-width: 1200px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
+}
+@media (max-width: 768px) {
+    .education-cards, .tech-grid {
+        flex-direction: column;
+    }
+    .education-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
